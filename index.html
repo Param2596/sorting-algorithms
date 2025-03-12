@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+    </header>
+    
+    <div class="controls">
+        <div class="input-group">
+            <label for="array-size">Array Size:</label>
+            <input type="range" id="array-size" min="5" max="100" value="50">
+            <span id="size-value">50</span>
+            <button id="toggle-sound" class="btn btn-secondary">
+                <i class="fas fa-volume-up"></i> Sound On
+              </button>
+        </div>
+        
+        <div class="input-group">
+            <label for="animation-speed">Speed:</label>
+            <input type="range" id="animation-speed" min="1" max="100" value="50">
+            <span id="speed-value">50</span>
+        </div>
+        
+        <button id="generate-array">Generate New Array</button>
+        
+        <select id="algorithm-select">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+            <option value="heap">Heap Sort</option>
+        </select>
+        
+        <button id="sort-btn">Sort!</button>
+    </div>
+    
+    <div class="container">
+        <div class="bars-container" id="bars-container"></div>
+    </div>
+    
+    <div class="algorithm-info">
+        <h2 id="current-algorithm">Bubble Sort</h2>
+        <div class="complexity">
+            <p><strong>Time Complexity:</strong> <span id="time-complexity">O(n²)</span></p>
+            <p><strong>Space Complexity:</strong> <span id="space-complexity">O(1)</span></p>
+        </div>
+        <p id="algorithm-description">Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
